@@ -2,7 +2,10 @@ import React from 'react';
 
 const bgBlue = {
     backgroundColor: 'blue',
-    fontSize: '20px'
+}
+
+const bgGray = {
+    backgroundColor: 'gray',
 }
 
 class Footer extends React.Component {
@@ -12,16 +15,11 @@ class Footer extends React.Component {
         date: new Date() 
      } 
     }
-    
-    log() { 
-        console.log("Event is fired"); 
-    }
 
     render () {
         return (
-            <div style={bgBlue}>
+            <div>
                 Footer
-                <div onClick={this.log}> log </div>
             </div>
         )
     }

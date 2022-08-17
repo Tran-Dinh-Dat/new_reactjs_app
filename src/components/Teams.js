@@ -1,12 +1,13 @@
 import React from "react";
-class Home extends React.Component {
+
+class Teams extends React.Component {
     render() {
         return (
             <div>
-                Hom
+                teams
             </div>
         )
     }
 }
 
-export default Home
+export default Teams
