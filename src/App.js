@@ -1,17 +1,17 @@
 import './App.css';
-import Header from './layouts/clients/Header';
-import Footer from './layouts/clients/Footer';
-import { Link, Outlet } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { publicRoutes } from './routers';
+import PrimaryLayout from './layouts/PrimaryLayout';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="content">
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<PrimaryLayout />}>
+        {publicRoutes.map(({ path, component }, index) => (
+          <Route path={path} element={component} key={index} />
+        ))}
+      </Route>
+    </Routes>
   );
 }
 

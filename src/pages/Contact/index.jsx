@@ -1,13 +1,12 @@
 import React from "react";
-
-class Teams extends React.Component {
+class Contact extends React.Component {
     render() {
         return (
             <div>
-                teams
+                Contact
             </div>
         )
     }
 }
 
-export default Teams
+export default Contact
